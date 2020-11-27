@@ -1,0 +1,52 @@
+
+.page-wrapper{
+    position:relative;
+    margin: 0 auto;
+    width:100%;
+    min-width:300px;
+    z-index:2;
+    overflow:hidden;
+    top:0;
+    left:0;
+}
+
+.auto-container{
+    max-width:1200px;
+    position:static;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+}
+
+----------Navbar-boilerplate-----------
+
+<header>
+logo
+<ul>
+<li>
+</header>
+
+----------Additional Css class on <header> tag-----------
+
+
+header.is-sticky{
+......
+}
+
+
+----------Script-------------------
+
+window.addEventListener("scroll", function(){
+var header = document.querySelector("header");
+header.classList.toggle("is-sticky", window.scrollY > 0)
+})

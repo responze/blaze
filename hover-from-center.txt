@@ -1,0 +1,63 @@
+<div class="wrapper">
+
+  <div class="parent">
+      <div class="icon">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#B94437" d="M43.6,-47.6C54.6,-32.5,60.5,-16.3,60.7,0.2C60.8,16.6,55.3,33.2,44.3,45.3C33.2,57.4,16.6,64.9,-0.8,65.7C-18.2,66.5,-36.4,60.5,-50.5,48.4C-64.6,36.4,-74.6,18.2,-72.5,2.1C-70.4,-13.9,-56.1,-27.9,-42,-43C-27.9,-58.1,-13.9,-74.3,1.2,-75.5C16.3,-76.7,32.5,-62.7,43.6,-47.6Z" transform="translate(100 100)" />
+</svg>
+      </div>
+ </div>
+</div>
+
+<style>
+
+.wrapper{
+position: relative;
+display: flex;
+justify-content:center;
+align-items:center;
+}
+.parent {
+    background: #eff0f1;
+    text-align: center;
+    padding: 40px;
+}
+.parent .icon {
+    background:#c8c3bd;
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    line-height: 90px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.parent .icon::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    height: 100%;
+    width: 100%;
+    background: #b18352;
+    border-radius: 50%;
+    z-index: -1;
+     -webkit-transition: all .5s linear 0s;
+    -moz-transition: all .5s linear 0s;
+    -ms-transition: all .5s linear 0s;
+    -o-transition: all .5s linear 0s;
+    transition: all .5s linear 0s;
+}
+
+.parent:hover .icon::before {
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+
+</style>
